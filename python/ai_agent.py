@@ -27,12 +27,16 @@ try:
 except ImportError:
     TENSORFLOW_AVAILABLE = False
 
-# Database configuration
+# Database configuration - use Settings class for environment variable support
+from config import get_settings
+settings = get_settings()
+
+# Legacy DB_CONFIG for backward compatibility (uses Settings)
 DB_CONFIG = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': '',
-    'database': 'adarna_db'
+    'host': settings.db_host,
+    'user': settings.db_user,
+    'password': settings.db_password,
+    'database': settings.db_name
 }
 
 class AIAgent:
