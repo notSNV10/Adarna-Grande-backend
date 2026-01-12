@@ -9,7 +9,7 @@ from typing import Optional
 
 class Settings:
     # Database
-    db_host: str = os.getenv("DB_HOST", "srv2093.hstgr.io")
+    db_host: str = os.getenv("DB_HOST", "148.222.53.75")
     db_user: str = os.getenv("DB_USER", "u446276639_adarna_user")
     db_password: str = os.getenv("DB_PASSWORD", "f!7WBjM4b")
     db_name: str = os.getenv("DB_NAME", "u446276639_adarna_db")
